@@ -2,6 +2,6 @@
 Qt Space Shooter Individual Project
 
 
-Beginnings of a retro space shooter game.
+A retro space shooter game in C++ made with Qt Creator.
 
-Made with Qt Creator.
+Utilizes object-oriented programming to manage interactions between different elements of the game.
