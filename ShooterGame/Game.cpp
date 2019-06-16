@@ -1,14 +1,10 @@
-    #include "Game.h"
+#include "Game.h"
 #include <QGraphicsTextItem>
 #include <QFont>
 #include <QDebug>
 #include <QBrush>
 #include <QImage>
 #include <typeinfo>
-
-// Enemy counter. Boss "mode" vs regular enemies mode. Save high score? Fix art of power up. Maybe make art for boss.
-// Game over screen
-// add list of objects
 
 Game::Game(QWidget *)
 {
@@ -90,21 +86,21 @@ void Game::endGame()
     actionTimer->stop();
     movementTimer->stop();
     QList<QGraphicsItem *> sceneItems = items();
-    qDebug() << "SIZE: " << sceneItems.size();
+    //qDebug() << "SIZE: " << sceneItems.size();
     for(int i = 0; i < sceneItems.size(); ++i){
         auto tempPtr = sceneItems[i];
 
-        qDebug() << "FOR LOOP: " << i << " " << typeid(*tempPtr).name();
+        //qDebug() << "FOR LOOP: " << i << " " << typeid(*tempPtr).name();
 
         if( typeid(*tempPtr) == typeid(Enemy) || typeid(*tempPtr) == typeid(Boss)
                 || typeid(*tempPtr) == typeid(Bullet) || typeid(*tempPtr) == typeid(PowerUp)
                 || typeid(*tempPtr) == typeid(Player)){
-            qDebug() << "DELETING";
+            //qDebug() << "DELETING";
             scene->removeItem(sceneItems[i]);
             static_cast<GameObj*>(tempPtr)->deleteLater();
         }
         else if( typeid(*tempPtr) == typeid(BossHealth)){
-            qDebug() << "Deleting BOSSHEALTH";
+            //qDebug() << "Deleting BOSSHEALTH";
             scene->removeItem(sceneItems[i]);
             static_cast<BossHealth*>(tempPtr)->deleteLater();
         }
@@ -138,7 +134,7 @@ void Game::resetGame()
     player->setFlag(QGraphicsItem::ItemIsFocusable);
     player->setFocus();
     scene->addItem(player);
-    playerHealth->setHealth(1);
+    playerHealth->setHealth(3);
     score->setScore(0);
     wave = 0;
     enemyCounter = 0;

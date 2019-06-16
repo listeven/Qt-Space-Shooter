@@ -17,7 +17,7 @@ PowerUp::PowerUp() : GameObj ()
 
 }
 PowerUp::~PowerUp(){
-    qDebug() << "POWERUP DELETED";
+    //qDebug() << "POWERUP DELETED";
 }
 
 void PowerUp::move(){

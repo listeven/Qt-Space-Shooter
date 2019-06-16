@@ -11,8 +11,8 @@ Game * game;
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    qDebug() << QFontDatabase::addApplicationFont(":/res/fonts/ARCADECLASSIC.TTF");
-    qDebug() << QFontDatabase::applicationFontFamilies(0);
+    QFontDatabase::addApplicationFont(":/res/fonts/ARCADECLASSIC.TTF");
+    //qDebug() << QFontDatabase::applicationFontFamilies(0);
     game = new Game();
 
     return a.exec();

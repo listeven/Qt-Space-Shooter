@@ -36,7 +36,6 @@ GameMsg::GameMsg(): QGraphicsItemGroup (), QObject ()
 void GameMsg::keyPressEvent(QKeyEvent *event)
 {
     if(event->key() == Qt::Key_Space){
-        qDebug() << "SPACE" ;
         game->resetGame();
     }
 }

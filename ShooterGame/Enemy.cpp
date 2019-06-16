@@ -37,7 +37,7 @@ Enemy::Enemy(double x, double y, double speed) : GameObj ()
 }
 
 Enemy::~Enemy(){
-    qDebug() << "ENEMY DELETED!!!";
+    //qDebug() << "ENEMY DELETED!!!";
 }
 void Enemy::move(){
     // Move down
