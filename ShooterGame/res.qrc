@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>images/Boss.png</file>
+        <file>images/Bullet.png</file>
+        <file>images/EnemyUFO.png</file>
+        <file>images/PowerUpModel.png</file>
+        <file>images/Spaceship.png</file>
+        <file>images/StarryBG.png</file>
+        <file>images/textBox.png</file>
+        <file>fonts/ARCADECLASSIC.TTF</file>
+    </qresource>
+</RCC>
